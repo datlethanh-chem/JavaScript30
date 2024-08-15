@@ -20,13 +20,13 @@
       margin: 0;
     }
 
-    *, *:before, *:after {
-      box-sizing: inherit;
+    *, *:before, *:after { /*  ::before and ::after pseudo-elements */
+      box-sizing: inherit; /*  inherit the value from its parent element. */
     }
 
     .panels {
       min-height: 100vh;
-      overflow: hidden;
+      overflow: hidden; /* overflowed content is not displayed, no scrolls */
       display: flex;
     }
 
@@ -48,7 +48,7 @@
       flex: 1;
       justify-content: center;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* three words displayed as flex */
     }
 
     .panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
@@ -85,13 +85,13 @@
     }
 
     .panel.open {
-      flex: 5;
+      flex: 5; /* take up 5 times of space COMPARED with flex: 1 items */
       font-size: 40px;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) { /* screen: excluding other types of media like print */
       .panel p {
-        font-size: 1em;
+        font-size: 1em; /* em: font size of the element parent. */
       }
     }
   </style>
