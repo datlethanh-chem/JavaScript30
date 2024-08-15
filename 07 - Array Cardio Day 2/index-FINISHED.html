@@ -36,7 +36,7 @@
 
     const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
 
-    console.log({isAdult});
+    console.log({isAdult}); //  {isAdult: isAdult}, name:value pair. Why? readability, clarity
     // Array.prototype.every() // is everyone 19?
 
     const allAdults = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
@@ -59,9 +59,9 @@
 
     // comments.splice(index, 1);
 
-    const newComments = [
-      ...comments.slice(0, index),
-      ...comments.slice(index + 1)
+    const newComments = [ // [] is the array
+      ...comments.slice(0, index), // ... is spread operator to unpack an array into elements; 
+      ...comments.slice(index + 1) // slice(a,b) method: smaller array from index a up to (not including) index b
     ];
 
   </script>
