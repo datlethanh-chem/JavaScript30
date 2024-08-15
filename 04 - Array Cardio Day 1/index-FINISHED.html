@@ -99,10 +99,10 @@
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
 
     const transportation = data.reduce(function(obj, item) {
-      if (!obj[item]) {
-        obj[item] = 0;
+      if (!obj[item]) { // checks if the item exists as a key in the obj object
+        obj[item] = 0; // every item in the array starts with a count of 0 in the object
       }
-      obj[item]++;
+      obj[item]++; // This increments the count for the item.
       return obj;
     }, {});
 
